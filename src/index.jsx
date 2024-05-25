@@ -6,11 +6,11 @@ import {
   createRoutesFromElements,
   Route 
 } from 'react-router-dom'
-import Home, {loader as homeLoader} from './components/Home'
+import Home, {loader as homeLoader, action as homeAction} from './components/Home'
 import './index.css'
 
 const router = createBrowserRouter(createRoutesFromElements(
-  <Route path="/" element={<Home />} loader={homeLoader} />
+  <Route path="/" element={<Home />} loader={homeLoader} action={homeAction} />
 ))
 
 function App() {
